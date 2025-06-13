@@ -23,11 +23,7 @@ const RecentPage = () => {
                 }
             </div>
         </div>
-//         Car Gallery with slider
 
-// 📍 Map location with animated pins
-
-// 🎯 “How It Works” step animation
     );
 };
 
