@@ -2,25 +2,25 @@ import React from 'react';
 import { CiCalendarDate } from 'react-icons/ci';
 import { FaCar, FaCheck, FaDollarSign } from 'react-icons/fa';
 import { FaLocationDot } from 'react-icons/fa6';
-import { MdAppRegistration, MdBrowserUpdated} from 'react-icons/md';
+import { MdAppRegistration, MdBrowserUpdated } from 'react-icons/md';
 import { Link, useLoaderData } from 'react-router';
 
 const MyBookingDetails = () => {
     const detailsData = useLoaderData();
-    console.log(detailsData)
-    const {
-  availability,
-  carmodel,
-  createdAt,
-  endDate,
-  image,
-  location,
-  rentalprice,
-  startDate,
 
-  totalCost,
-  
-} = detailsData;
+    const {
+        availability,
+        carmodel,
+        createdAt,
+        endDate,
+        image,
+        location,
+        rentalprice,
+        startDate,
+
+        totalCost,
+
+    } = detailsData;
 
     return (
         <div className="mt-9 mb-12">
@@ -34,7 +34,7 @@ const MyBookingDetails = () => {
                     </svg>
                 </span>
                 <span className="absolute flex items-center justify-center w-full h-full text-amber-600 transition-all duration-300 transform group-hover:translate-x-full ease">
-                   Back to My Booking
+                    Back to My Booking
                 </span>
                 <span className="relative invisible">Back to My Booking</span>
             </Link>
@@ -65,39 +65,39 @@ const MyBookingDetails = () => {
                         <FaDollarSign className='text-yellow-500' size={15} />
                         <span className="font-semibold">Price:</span> ${rentalprice} / day
                     </p>
-                    
+
                     <p className="text-lg text-gray-700 flex items-center gap-2">
-                        <CiCalendarDate className='text-yellow-500' size={15}/>
+                        <CiCalendarDate className='text-yellow-500' size={15} />
                         <h3 > <span className='font-medium'>Start Date:</span> {startDate} </h3>
                     </p>
                     <p className="text-lg text-gray-700 flex items-center gap-2">
-                        <CiCalendarDate className='text-yellow-500' size={15}/>
+                        <CiCalendarDate className='text-yellow-500' size={15} />
                         <h3 > <span className='font-medium'>End Date:</span> {endDate} </h3>
                     </p>
                     <p className="text-lg text-gray-700 flex items-center gap-2">
-                        <CiCalendarDate className='text-yellow-500' size={15}/>
+                        <CiCalendarDate className='text-yellow-500' size={15} />
                         <h3 > <span className='font-medium'>Booking Date:</span> {createdAt} </h3>
                     </p>
                     <p className="text-lg text-gray-700 flex items-center gap-2">
-                        
+
                         <h3 > <span className='font-medium'>$ TotalCost:</span> {totalCost} </h3>
                     </p>
 
-                    
+
 
                     <p className="text-gray-800 flex items-center gap-2">
                         <FaCheck className="text-green-500" size={15} />
                         <span className="font-semibold">Availability:</span> {availability}
                     </p>
 
-                    
 
-                    
-                    
-                    
+
+
+
+
                 </div>
             </div>
-            </div>
+        </div>
     );
 };
 

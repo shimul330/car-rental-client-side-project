@@ -24,7 +24,7 @@ const MyCarTable = ({ data, deleteCar, setDeleteCar, setSelectedCar }) => {
 
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:3000/cars/${_id}`, {
+                fetch(`https://assainment-11-server-side.vercel.app/cars/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

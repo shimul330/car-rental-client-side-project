@@ -15,7 +15,7 @@ const AddCar = () => {
 
         // send data in database
 
-        fetch('http://localhost:3000/cars', {
+        fetch('https://assainment-11-server-side.vercel.app/cars', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

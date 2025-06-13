@@ -2,15 +2,16 @@ import React, { use, useEffect, useState } from 'react';
 import logoImg from '../assets/logo.png';
 import { Link, NavLink } from 'react-router';
 import { AuthContext } from '../Context/AuthContext';
+import { toast } from 'react-toastify';
 
 const Navbar = () => {
     const { user, userLogOut, info } = use(AuthContext);
 
     const handleLogOut = () => {
         userLogOut().then(() => {
-            console.log("sign out")
+           toast.success("logout Successfull")
         }).catch((error) => {
-            // An error happened.
+           toast.warning("Please try again")
         });
     }
 

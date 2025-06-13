@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             },
             {
                 path: 'availableCar',
-                loader: () => fetch('http://localhost:3000/available-cars'),
+                loader: () => fetch('https://assainment-11-server-side.vercel.app/available-cars'),
                 element: <AvailableCar></AvailableCar>
             },
             {
@@ -51,7 +51,7 @@ const router = createBrowserRouter([
                             try {
                                 const token = await user.getIdToken();
 
-                                const res = await fetch(`http://localhost:3000/cars?email=${user.email}`, {
+                                const res = await fetch(`https://assainment-11-server-side.vercel.app/cars?email=${user.email}`, {
                                     headers: {
                                         Authorization: `Bearer ${token}`,
                                     },
@@ -73,7 +73,7 @@ const router = createBrowserRouter([
             {
                 path: 'mybookings',
                 hydrateFallbackElement: <span className="loading loading-bars loading-xl"></span>,
-                // loader: ()=>fetch('http://localhost:3000/bookings'),
+                // loader: ()=>fetch('https://assainment-11-server-side.vercel.app/bookings'),
                 loader: () => {
                     return new Promise((resolve, reject) => {
                         const auth = getAuth(app);
@@ -87,7 +87,7 @@ const router = createBrowserRouter([
                             try {
                                 const token = await user.getIdToken();
 
-                                const res = await fetch(`http://localhost:3000/bookings?email=${user.email}`, {
+                                const res = await fetch(`https://assainment-11-server-side.vercel.app/bookings?email=${user.email}`, {
                                     headers: {
                                         Authorization: `Bearer ${token}`,
                                     },
@@ -113,17 +113,17 @@ const router = createBrowserRouter([
             {
                 path: 'availablecardetails/:id',
                 hydrateFallbackElement: <span className="loading loading-bars loading-xl"></span>,
-                loader: ({ params }) => fetch(`http://localhost:3000/cars/${params.id}`),
+                loader: ({ params }) => fetch(`https://assainment-11-server-side.vercel.app/cars/${params.id}`),
                 element: <AvailableCarDetails></AvailableCarDetails>
             },
             {
                 path: 'mybookingupdate/:id',
-                loader: ({ params }) => fetch(`http://localhost:3000/bookings/${params.id}`),
+                loader: ({ params }) => fetch(`https://assainment-11-server-side.vercel.app/bookings/${params.id}`),
                 element: <MyBookingUpdate></MyBookingUpdate>
             },
             {
                 path: 'mybookingsDetails/:id',
-                loader: ({ params }) => fetch(`http://localhost:3000/bookings/${params.id}`),
+                loader: ({ params }) => fetch(`https://assainment-11-server-side.vercel.app/bookings/${params.id}`),
                 element: <MyBookingDetails></MyBookingDetails>
             },
             {

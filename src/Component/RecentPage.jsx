@@ -6,7 +6,7 @@ const RecentPage = () => {
     const [latestCar, setLatestCar] = useState([]);
     
     useEffect(()=>{
-        fetch('http://localhost:3000/latest-cars')
+        fetch('https://assainment-11-server-side.vercel.app/latest-cars')
         .then(res=>res.json())
         .then(data=>{
             setLatestCar(data)

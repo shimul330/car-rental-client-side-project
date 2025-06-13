@@ -36,7 +36,7 @@ const MyBookingUpdate = () => {
             endDate,
             totalCost,
         };
-        fetch(`http://localhost:3000/bookings/${_id}`,{
+        fetch(`https://assainment-11-server-side.vercel.app/bookings/${_id}`,{
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

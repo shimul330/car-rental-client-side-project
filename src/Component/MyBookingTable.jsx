@@ -33,7 +33,7 @@ const MyBookingTable = ({ data, setCancelBooking, cancelBooking }) => {
         }).then((result) => {
 
             if (result.isConfirmed) {
-                fetch(`http://localhost:3000/bookings/${_id}`, {
+                fetch(`https://assainment-11-server-side.vercel.app/bookings/${_id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

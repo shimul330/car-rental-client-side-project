@@ -14,7 +14,7 @@ const EditCarModal = ({ car, closeModal, setDeleteCar }) => {
         const updateCar = Object.fromEntries(formData.entries());
         
 
-        fetch(`http://localhost:3000/cars/${_id}`, {
+        fetch(`https://assainment-11-server-side.vercel.app/cars/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -23,7 +23,7 @@ const EditCarModal = ({ car, closeModal, setDeleteCar }) => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
+               
                 if (data.modifiedCount) {
                     Swal.fire({
                         position: "top-end",

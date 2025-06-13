@@ -41,7 +41,7 @@ const ConfirmModal = ({ car, onCancel, onConfirm }) => {
         };
        bookingData.userEmail = user.email;
 
-        fetch('http://localhost:3000/bookings', {
+        fetch('https://assainment-11-server-side.vercel.app/bookings', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
