@@ -1,0 +1,6 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.active{
+    @apply border-b-2  border-amber-400
+}
