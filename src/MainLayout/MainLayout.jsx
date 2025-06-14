@@ -3,9 +3,11 @@ import Navbar from '../Component/Navbar';
 import { Outlet } from 'react-router';
 import Footer from '../Component/Footer';
 
+
 const MainLayout = () => {
     return (
-        <div>
+        <div >
+          
            <div className='sticky top-0 z-50 '>
                  <Navbar></Navbar>
            </div>

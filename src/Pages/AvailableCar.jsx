@@ -41,7 +41,7 @@ const AvailableCar = () => {
     });
 
     return (
-        <div className='mt-12 mb-12' >
+        <div className='mt-12 mb-12 ' >
              <DynamicTittle title='Available Cars'/>
             {/*  Search Box */}
             <div className="mb-5 flex flex-col md:flex-row justify-between items-center gap-4">

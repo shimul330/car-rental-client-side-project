@@ -1,63 +1,110 @@
 import React from 'react';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import Slider from 'react-slick';
+
+
 import slider1Img from '../assets/images5.jpg';
 import slider2Img from '../assets/imageyello.jpg';
+import slider3Img from '../assets/sider 4.jpg';
+import slider4Img from '../assets/slider5.jpg';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { Link } from 'react-router';
+
 
 const Banner = () => {
 
-  const settings = {
-    dots: false,
-    autoplay: true,
-    autoplaySpeed: 2000,
-    infinite: true,
-    speed: 300,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-  };
+  
 
   return (
-    <div className="shadow-2xl">
-      <Slider {...settings}>
-        {/* Slide 1 */}
-        <div className="relative">
+    <div className="w-full max-w-6xl mx-auto py-10">
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={{ clickable: true }}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        className="mySwiper"
+      >
+        <SwiperSlide className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] h-[400px]">
           <img
             src={slider1Img}
             alt="Slide 1"
-            className="object-cover mx-auto h-[600px] rounded-lg border-b-2 border-green-500 w-full"
+            className="rounded-xl object-cover w-full h-[400px] border-b-4 border-green-500"
             loading="lazy"
           />
-          {/* 🔹 Text on top with no background */}
-          <div className="absolute space-y-3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h2 className="text-4xl font-bold text-amber-400">Welcome to Car Rentar</h2>
-            <p className="text-xl mt-2 text-white">A car is every person's dream. </p>
-            <Link to='/availableCar'>
-              <button className='btn bg-amber-500'>Go Available Car</button>
+          <div className="absolute inset-0 bg-black/10 rounded-xl flex flex-col items-center justify-center text-center text-white px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-amber-400 mb-2">Welcome to Car Rentar</h2>
+            <p className="text-lg sm:text-xl mb-4">A car is every person's dream.</p>
+            <Link to="/availableCar">
+              <button className="btn bg-amber-500 text-white px-6 py-2 rounded shadow hover:bg-amber-600 transition">Go Available Car</button>
             </Link>
           </div>
-          
-        </div>
+        </SwiperSlide>
 
-        {/* Slide 2 */}
-        <div className="relative">
+        <SwiperSlide className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] h-[400px]">
           <img
             src={slider2Img}
             alt="Slide 2"
-            className="object-cover mx-auto h-[600px] rounded-lg border-b-2 border-green-500 w-full"
+            className="rounded-xl object-cover w-full h-[400px] border-b-4 border-green-500"
             loading="lazy"
           />
-          <div className="absolute space-y-3 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white text-center">
-            <h2 className="text-4xl font-bold  text-amber-400 shadow">Welcome to Car Rentar</h2>
-            <p className=" mt-2 text-white text-xl mb-3">A car is every person's dream.</p>
-             <Link to='/availableCar'>
-              <button className='btn bg-amber-500'>Go Available Car</button>
+          <div className="absolute inset-0 bg-black/10 rounded-xl flex flex-col items-center justify-center text-center text-white px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-amber-400 mb-2">Welcome to Car Rentar</h2>
+            <p className="text-lg sm:text-xl mb-4">A car is every person's dream.</p>
+            <Link to="/availableCar">
+              <button className="btn bg-amber-500 text-white px-6 py-2 rounded shadow hover:bg-amber-600 transition">Go Available Car</button>
             </Link>
           </div>
-        </div>
-      </Slider>
+        </SwiperSlide>
+
+        <SwiperSlide className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] h-[400px]">
+          <img
+            src={slider3Img}
+            alt="Slide 2"
+            className="rounded-xl object-cover w-full h-[400px] border-b-4 border-green-500"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black/10 rounded-xl flex flex-col items-center justify-center text-center text-white px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-amber-400 mb-2">Welcome to Car Rentar</h2>
+            <p className="text-lg sm:text-xl mb-4">A car is every person's dream.</p>
+            <Link to="/availableCar">
+              <button className="btn bg-amber-500 text-white px-6 py-2 rounded shadow hover:bg-amber-600 transition">Go Available Car</button>
+            </Link>
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide className="relative w-[90%] sm:w-[80%] md:w-[70%] lg:w-[60%] xl:w-[50%] h-[400px]">
+          <img
+            src={slider4Img}
+            alt="Slide 2"
+            className="rounded-xl object-cover w-full h-[400px] border-b-4 border-green-500"
+            loading="lazy"
+          />
+          <div className="absolute inset-0 bg-black/10 rounded-xl flex flex-col items-center justify-center text-center text-white px-4">
+            <h2 className="text-3xl sm:text-4xl font-bold text-amber-400 mb-2">Welcome to Car Rentar</h2>
+            <p className="text-lg sm:text-xl mb-4">A car is every person's dream.</p>
+            <Link to="/availableCar">
+              <button className="btn bg-amber-500 text-white px-6 py-2 rounded shadow hover:bg-amber-600 transition">Go Available Car</button>
+            </Link>
+          </div>
+        </SwiperSlide>
+
+     
+      </Swiper>
     </div>
+    
   );
 };
 
