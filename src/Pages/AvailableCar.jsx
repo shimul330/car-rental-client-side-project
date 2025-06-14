@@ -4,6 +4,7 @@ import AvailableCard from '../Component/AvailableCard';
 import { FaArrowRightToBracket } from 'react-icons/fa6';
 import { HiMiniArrowLeftStartOnRectangle } from 'react-icons/hi2';
 import { IoMdSearch } from 'react-icons/io';
+import DynamicTittle from '../Component/DynamicTittle';
 
 
 
@@ -41,6 +42,7 @@ const AvailableCar = () => {
 
     return (
         <div className='mt-12 mb-12' >
+             <DynamicTittle title='Available Cars'/>
             {/*  Search Box */}
             <div className="mb-5 flex flex-col md:flex-row justify-between items-center gap-4">
                 {/*  Search Box */}

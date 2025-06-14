@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLoaderData } from 'react-router';
 import MyCarEmpty from '../Component/MyCarEmpty';
 import MyBookingTable from '../Component/MyBookingTable';
+import DynamicTittle from '../Component/DynamicTittle';
 
 const MyBookings = () => {
     const bookingData = useLoaderData();
@@ -9,6 +10,7 @@ const MyBookings = () => {
     
     return (
         <div className='mt-4 mb-4'>
+             <DynamicTittle title='MyBookings'/>
              <div>
                 <h1 className='text-2xl text-center font-bold text-amber-500 mb-7'>My Car</h1>
             </div>

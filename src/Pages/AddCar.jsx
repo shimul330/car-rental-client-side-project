@@ -1,6 +1,7 @@
 import React, { use } from 'react';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Context/AuthContext';
+import DynamicTittle from '../Component/DynamicTittle';
 
 const AddCar = () => {
    const { user } = use(AuthContext);
@@ -38,6 +39,7 @@ const AddCar = () => {
     }
     return (
         <div className='mt-10 mb-10 max-w-6xl mx-auto px-4 py-6 shadow-xl rounded-2xl'>
+             <DynamicTittle title='Add Car'/>
             <h1 className='text-center text-xl text-amber-600 mb-4 font-bold'>Add Car</h1>
             <form onSubmit={handleAddCar} >
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-5'>

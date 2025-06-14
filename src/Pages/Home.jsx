@@ -4,11 +4,13 @@ import WhyChoose from '../Component/WhyChoose';
 import RecentPage from '../Component/RecentPage';
 import ExtraSection from '../Component/ExtraSection';
 import CarGallary from '../Component/CarGallary';
+import DynamicTittle from '../Component/DynamicTittle';
 
 const Home = () => {
     return (
         <div>
          <div className='mt-6'>
+            <DynamicTittle title='Home'/>
               <Banner></Banner>
               <div className='mt-6'>
                     <WhyChoose></WhyChoose>

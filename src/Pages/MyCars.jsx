@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router';
 import MyCarTable from '../Component/MyCarTable';
 import MyCarEmpty from '../Component/MyCarEmpty';
 import EditCarModal from '../Component/EditCarModal';
+import DynamicTittle from '../Component/DynamicTittle';
 
 
 
@@ -17,6 +18,7 @@ const MyCars = () => {
 
     return (
          <div className='p-12'>
+             <DynamicTittle title='My Cars'/>
             <div>
                 <h1 className='text-2xl text-center font-bold text-amber-500 mb-7'>My Car</h1>
             </div>

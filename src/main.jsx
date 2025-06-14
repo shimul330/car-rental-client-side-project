@@ -7,24 +7,27 @@ import router from './Router/Router.jsx'
 import AuthProvider from './Context/AuthProvider.jsx'
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
+import { HelmetProvider } from 'react-helmet-async'
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <AuthProvider>
-      <RouterProvider router={router}></RouterProvider>
-      <ToastContainer
-        position="top-right"
-        autoClose={2000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      ></ToastContainer>
-    </AuthProvider>
+    <HelmetProvider>
+      <AuthProvider>
+        <RouterProvider router={router}></RouterProvider>
+        <ToastContainer
+          position="top-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        ></ToastContainer>
+      </AuthProvider>
+    </HelmetProvider>
   </StrictMode>,
 )
