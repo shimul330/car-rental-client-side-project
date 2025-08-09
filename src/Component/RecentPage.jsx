@@ -15,7 +15,7 @@ const RecentPage = () => {
     
    
     return (
-        <div>
+        <div className='px-2 md:px-0'>
             <h1 className='text-center font-semibold text-2xl mb-5'>Recent Page</h1>
             <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5'>
                 {
